@@ -1,0 +1,478 @@
+/*internal style sheet*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(#1e656d, #f1f3ce,#00293c);
+   
+}
+h1{
+    font-family: raleigh-rock;
+}
+@font-face{
+    font-family: "social-shapes";
+    src: url("Fonts/social-shapes.ttf") format("ttf"),
+        url("Fonts/social-shapes.woff") format("woff");
+}
+@font-face{
+    font-family: "raleigh-rock";
+    src: url("Fonts/raleigh-rock.ttf") format("ttf"),
+        url("Fonts/raleigh-rock.woff") format("woff");
+}
+
+    
+/*CSS for Nav bar*/
+a:link{
+    color: black;
+}
+a:visited{
+    color: #00293c;
+}
+a:hover{
+    color: #f1f3ce;
+}
+a:active {
+    color: #f62a00;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5em;
+    
+}
+#headstruct{
+    display: grid;
+    height: 100px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas:
+        "l . ."
+        "l x x";
+}  
+#headstruct h1{
+    font-size: 65px;
+    display: inline;
+    margin-left: 70px;
+}   
+
+#logo{
+    grid-area: l;
+    
+}
+#logo h1{
+    grid-area: l;
+    color: #f1f3ce;
+    text-align: center;
+    justify-content: center;
+    
+}
+#nav{
+    grid-area: x;
+    border: 4px solid #00293c;
+    background-image: linear-gradient(#1e656d, #f1f3ce,#00293c);
+
+}
+#ul li {
+    display: inline;
+    margin: 20px;
+    justify-items: center;
+}
+#home{
+    grid-area: ho;
+}
+#videos{
+    grid-area: v;
+}
+#services{
+    grid-area: s;
+}
+#contact{
+    grid-area: c;
+}
+#blog{
+    grid-area: b;
+}
+#about{
+    grid-area: a;
+}
+
+/* CSS for body of home page */
+#container{
+    display: grid;
+    height: 500px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(1,1fr);
+    border: 10px solid #00293c;
+    grid-template-areas:
+        "vi vi m";
+  
+}
+#video{
+    grid-area: vi;
+   
+}
+#video iframe{
+    width:100%;
+    height: 100%;
+}
+#mission{
+    grid-area: m;
+    background-color: #00293c;
+    padding: 20px;
+    text-align: center;
+    color: #f1f3ce;
+}
+#mission p{
+    text-indent: 30px;
+    text-align: left
+}
+#mission h1{
+    font-size: 50px;
+}
+/* CSS for videos page*/
+#videocontainer{
+    display: grid;
+    align-content: center;
+    padding: 30px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+        "video1 video2"
+        "video3 video4"
+        "video5 video6";
+}
+#videocontainer iframe{
+    margin-left: 50px;
+    border: 10px solid #00293c;
+}
+
+#video1{
+    grid-area: video1;
+}
+#video2{
+    grid-area: video2;
+}
+#video3{
+    grid-area: video3;
+}
+#video4{
+    grid-area: video4;
+}
+#video5{
+    grid-area: video5;
+}
+#video6{
+    grid-area: video6;
+}
+/* CSS for services page*/
+    #servicecontainer{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas:  
+            "events products"
+            "corprate production";
+    }
+   
+    #events{
+        
+        margin: 20px;
+        padding: 15px;
+        display: grid;
+        background-image: url(media/background.jpg);
+        background-repeat: no-repeat;
+        border: #00293c solid 10px;
+        grid-area: events;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(1,1fr);
+        grid-template-areas:  
+            "eventsvideo"
+            "eventsdiscriptions";
+    }
+    #products{
+        margin: 20px;
+        padding: 15px;
+        display: grid;
+        background-image: url(media/background.jpg);
+        background-repeat: no-repeat;
+        border: #00293c solid 10px;
+        grid-area: products;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(1,1fr);
+        grid-template-areas:  
+            "productsvideo"
+            "productsdiscriptions";
+    }
+    #corprate{
+        margin: 20px;
+        padding: 15px;
+        display: grid;
+        background-image: url(media/background.jpg);
+        background-repeat: no-repeat;
+        border: #00293c solid 10px;
+        grid-area: corprate;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(1,1fr);
+        grid-template-areas:  
+            
+            "corpratevideo"
+            "corpratediscriptions";
+    }        
+    #production{
+        margin: 20px;
+        padding: 15px;
+        display: grid;
+        background-image: url(media/background.jpg);
+        background-repeat: no-repeat;
+        border: #00293c solid 10px;
+        grid-area: production;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(1,1fr);
+        grid-template-areas:  
+            "productionvideo"
+            "productiondiscriptions";
+    }
+    
+    
+    #eventstitle{
+        grid-area: eventstitle;
+    }
+    #eventsvideo{
+        grid-area: eventsvideo;
+    }
+    #eventsdiscriptions{
+        grid-area: eventsdiscriptions;
+    }
+    #productstitle{
+        grid-area: productstitle;
+    }
+    #productsvideo{
+        grid-area: productsvideo;
+    }
+    #productsdiscriptions{
+        grid-area: productsdiscriptions;
+    }
+    #corpratetitle{
+        grid-area: corpratetitle;
+    }
+    #corpratevideo{
+        grid-area: corpratevideo;
+    }
+    #corpratediscriptions{
+        grid-area: corpratediscriptions
+    }
+    #productiontitle{
+        grid-area: productiontitle 
+    }
+    #productionvideo{
+        grid-area: productionvideo
+    }
+    #productiondiscriptions{
+        grid-area: productiondiscriptions
+    }
+/* CSS for contact page*/
+    #button1:hover{
+        color: #f62a00;
+    }
+    #button1{
+        background-image: linear-gradient(#1e656d, #f1f3ce,#00293c);
+        height: 80px;
+        width: 100px;
+    }
+    input[type=text], select, textarea {
+        width: 100%; 
+        padding: 12px;
+        border: 1px solid #1e656d; 
+        border-radius: 4px; 
+        box-sizing: border-box; 
+        margin-top: 6px; 
+        margin-bottom: 16px; 
+        resize: vertical 
+    }
+    
+    input[type=Send] {
+        background-color: #00293c;
+        color: #f1f3ce;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    input[type=Send]:hover {
+        background-color: #f62a00;
+    }
+    
+    .contact_us {
+        border-radius: 5px;
+        padding: 20px;
+        display: grid;
+        
+    }
+    /* CSS of about page*/
+    #about{
+        display: grid;
+        
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(1,1fr);
+        grid-template-areas: 
+            "aboutinfo aboutvideo";
+    }
+    #aboutvideo{
+        grid-area: aboutvideo;
+        padding: 20px;
+        padding-top: 120px;
+    }
+    #aboutinfo{
+        grid-area: aboutinfo;
+        text-indent: 30px;
+        min-width: 400px;
+        padding: 60px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 10px;
+        background-image: url(media/background.jpg);
+        background-repeat: no-repeat;
+        border-radius: 30px;
+    }
+/* CSS for Footer */
+#foot{
+    display: grid;
+    
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
+    grid-template-areas:
+        "con so";
+      
+}
+#social{
+    grid-area:so;
+    font-family: social-shapes;
+    font-size: 60px;
+    padding-left: 200px;
+    
+}
+#contact{
+    grid-area: con;
+    color: #f1f3ce;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+/* width for tablet */
+@media screen and (max-width: 768px){
+    
+    #headstruct{
+        display: grid;
+        grid-area: head;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas:
+            "l"
+            "x";
+        
+    }
+    #container{
+        display: grid;
+        grid-area: contain;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas:
+            "m"
+            "vi";
+        padding-top: 4.8cm;
+        border: none;
+    }
+    header{
+        height: 3px;
+    }
+    #logo{
+        padding-left: 5cm;
+    }
+    #logo h1{
+        font-size: 50px;
+    }
+    a{
+        font-size: 1.2em;
+    }
+    #video{
+        height: 480px;
+    }
+    #foot{
+        padding-top: 7cm;
+    }
+    #social{
+        padding-top: 40px
+    }
+    #videocontainer{
+        padding-top: 150px;
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(6,1fr);
+        grid-template-areas:   
+            "video1"
+            "video2" 
+            "video3" 
+            "video4"
+            "video5"
+            "video6"; 
+        } 
+        .contact_us{
+            margin-top: 120px;
+        }
+    
+    #servicecontainer{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(1,1fr);
+        grid-template-areas:  
+            "events"
+            "products"
+            "corprate" 
+            "production";
+        margin-top: 140px;
+        }
+        #about{
+            display: grid;
+            
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(2,1fr);
+            grid-template-areas: 
+                "aboutvideo"
+                "aboutinfo";
+                
+        }
+        #aboutvideo{
+            padding-top: 180px;
+            padding-left: 100px;
+        }
+        #aboutinfo{
+            padding:40px;
+        }
+        #blogsite iframe{
+            margin-top: 200px;
+        }
+    }
+    
+/*width for phone*/
+@media screen and (max-width: 480px){
+    a{
+        font-size: 1em;
+    }
+    #logo{
+        padding-left: 2cm;
+    }
+    #video iframe{
+        visibility: hidden;
+    }
+    #video{
+        background-image: url(Media/camera.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #foot{
+        visibility: hidden;
+    }
+    #videocontainer iframe{
+        width: 70%;
+        height: 90%;
+    }    
+}
